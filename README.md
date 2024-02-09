@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+  const [productList, setproductList] = useState([]);
+   eski metot 
+   useEffect(() => {
+     fetch('https://dummyjson.com/products')
+       .then((response) => response.json())
+       .then((productList) => console.log('2. donen yanit', productList))
+       .catch((error) => console.log('Veri çekme hatasi', error));
+   }, [])
+
+  useEffect(() => {
+    axios.get('https://dummyjson.com/products')
+      .then((response) => setproductList(response?.data?.products))
+      .catch((error) => console.log('Axios get hatasi', error));
+  }, []);
+
+# json-server

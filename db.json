@@ -1,0 +1,16 @@
+{
+    "todos" : [
+        {
+            "id": 1,
+            "title": "Projeyi tamamla",
+            "date" : "22/11/2023",
+            "isDone" : false
+        },
+        {
+            "id": 2,
+            "title": "Json Server Deneme Verisi Olustur",
+            "date" : "15/09/2023",
+            "isDone" : true
+        }
+    ]
+}
